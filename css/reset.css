@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+/* CSS Document */
+/*defaultStyle Str*/
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+
+body,
+div,
+img,
+a img,
+ul,
+li,
+strong,
+span,
+input,
+em,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+dl,
+dt,
+dd {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+ol,
+ul,
+li {
+	list-style: none;
+}
+
+input,
+textarea,
+selset,
+option,
+table,
+th,
+td {
+	font-family: "Microsoft Yahei", Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #000000;
+}
+
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+	-webkit-appearance: none;
+}
+
+em {
+	font-style: normal;
+}
+
+img,
+input {
+	vertical-align: middle;
+}
+
+textarea,
+input:focus {
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+	color: #000000;
+}
+
+a:hover {
+	text-decoration: none;
+	/*text-decoration:none;*/
+	color: #000000;
+}
+
+a:focus {
+	outline: none;
+	text-decoration: none;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+/*defaultStyle End*/
+.f16 {
+	font-size: 16px;
+}
+
+/*publicStyle Str*/
+.header,
+.container,
+.footer {
+	width: 100%;
+	float: left;
+	position: relative;
+}
+
+.head,
+.content,
+.foot {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+option {
+	font-size: 15px;
+}
+
+/*publicStyle End*/

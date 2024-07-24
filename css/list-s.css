@@ -1,0 +1,427 @@
+.title-tm {
+    margin: 0 0 10px;
+	margin-bottom: 10px;
+	line-height: 25px;
+	font-size: 16px;
+}
+
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover,
+a:active,
+a:link,
+a:visited {
+	text-decoration: none;
+}
+
+.dj-list-bg {
+	background: #ffffff;
+}
+
+.dj-tit-line {
+	width: 100%;
+	height: 35px;
+}
+
+.dj-tit-line .breadcrumb>li a {
+	color: #000000;
+}
+
+.dj-tit-line .input-append input {
+	outline: none;
+	border: 1px solid #e8e8e8;
+	box-shadow: none;
+	width: 200px;
+}
+
+.dj-tit-line .input-append .btn {
+	border: 1px solid #e8e8e8;
+	background: #e8e8e8;
+	margin-top: 30px;
+}
+
+.dj-news-list {
+	width: 100%;
+	min-height: 300px;
+	padding-bottom: 10px;
+	overflow: hidden;
+}
+
+.dj-news-listlearn {
+	width: 100%;
+	min-height: 500px;
+	padding-bottom: 10px;
+	padding-top: 20px;
+	overflow: hidden;
+	margin-top: 15px;
+	box-shadow: 0 2px 4px #f0f0f0;
+}
+
+.dj-news-list>ul {
+	margin-top: 20px;
+	width: 96%;
+	margin-left: 16px;
+}
+
+.dj-news-list>ul li {
+	width: 100%;
+	float: left;
+	border-bottom: 1px dotted #909090;
+	height: 40px;
+}
+
+.dj-news-list>ul li a {
+	width: 100%;
+	display: block;
+	line-height: 40px;
+	color: #000000;
+}
+
+.dj-news-list>ul li a:hover {
+	color: #ca2d13;
+}
+
+.page-numul {
+	width: 100%;
+	height: 70px;
+}
+
+.page-numul .pager li a {
+	color: #494949;
+}
+
+.page-numul .pager li a:hover {
+	color: #ca2d13;
+}
+
+.dj-class-list {
+	width: 100%;
+	padding-bottom: 10px;
+	overflow: hidden;
+}
+
+.dj-class-list>ul {
+	margin-top: 20px;
+	width: 98%;
+	margin-left: 16px;
+}
+
+.dj-class-list>ul li {
+	width: 46%;
+	float: left;
+	margin-left: 2%;
+	margin-bottom: 10px;
+	/*border-bottom: 1px solid #f0f0f0;*/
+	padding-bottom: 5px;
+	padding-top: 5px;
+	margin-top: 20px;
+	padding-left: 10px;
+	height: 110px;
+	border-bottom: 1px dashed #f0f0f0;
+}
+
+.dj-class-list>ul li a {
+	display: table;
+	height: 100px;
+	width: 100%;
+	padding-top: 10px;
+}
+
+.dj-class-list>ul li a .dj-listcon-tit {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	text-align: center;
+	padding: 0 30px 0 30px;
+}
+
+.dj-class-list>ul li .dj-listcon-tit span {
+	font-size: 20px;
+	line-height: 28px;
+}
+
+.dj-class-list>ul li .dj-listcon-tit p {
+	margin-top: 8px;
+	font-size: 16px;
+}
+
+.dj-class-list>ul li:hover {}
+
+.dj-class-list>ul li .dj-listcon-img {}
+
+/*.dj-class-list > ul li a {*/
+/*width: 100%;*/
+/*display: inline-block;*/
+/*color: #000000;*/
+/*outline: none;*/
+/*}*/
+.dj-listcon-img {
+	width: 170px;
+	float: left;
+}
+
+/*.dj-listcon-tit{*/
+/*float: left;*/
+/*width: 280px;*/
+/*margin-left: 50px;*/
+/*text-align: center;*/
+/*}*/
+.class-img-left {
+	padding: 10px 0 10px 10px;
+}
+
+.class-img-right {
+	padding-top: 30px;
+	text-align: center;
+}
+
+.class-img-right h2 {
+	font-weight: 500;
+}
+
+.dj-k-line {
+	background: #fbfbfb;
+	width: 100%;
+	height: 10px;
+}
+
+.dj-classcon-list {
+	width: 100%;
+}
+
+.dj-classcon-list ul {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.dj-classcon-list ul li {
+	width: 11.77%;
+	float: left;
+	padding: 15px 21px;
+	border: 1px solid #fbfbfb;
+	border-right: 2px solid #fbfbfb;
+	font-size: 15px;
+	line-height: 26px;
+	background: url("../images/jiaobiao.png") no-repeat 0 0;
+	background-size: 20%;
+}
+
+.dj-classcon-list ul li a {
+	display: block;
+}
+
+/*===文章内容页==*/
+.dj-con-right {
+	background: #ffffff;
+}
+
+.dj-con-right .breadcrumb {
+	background: #ffffff;
+}
+
+.dj-news-con {
+	width: 100%;
+	min-height: 300px;
+	padding-bottom: 10px;
+}
+
+.dj-news-con .article-tit {
+	width: 100%;
+	height: auto;
+	border-bottom: 1px solid #f0f0f0;
+	margin-top: 40px;
+}
+
+.dj-news-con .article-tit h2,
+.dj-news-con .article-tit p {
+	text-align: center;
+}
+
+.dj-news-con .article-tit p {}
+
+.article-content {
+	width: 80%;
+	margin: 20px auto;
+}
+
+.article-content p {
+	text-indent: 2em;
+	line-height: 30px;
+	font-size: 16px;
+}
+
+.article-content p img {}
+
+/*==nodate左侧班级分类===*/
+.dj-con-left .dj-notice-c {
+	width: 100%;
+	height: 280px;
+	border: 1px solid #ffa7a6;
+}
+
+.dj-con-left .dj-noticelist-con {
+	width: 100%;
+	height: 260px;
+}
+
+.dj-notice-c .dj-noticelist-con {
+	width: 92%;
+	margin-left: 10px;
+	height: 220px;
+}
+
+.dj-notice-c .dj-noticelist-con ul {
+	width: 100%;
+	display: inline-block;
+}
+
+.dj-notice-c .dj-noticelist-con ul li {
+	width: 100%;
+	display: block;
+	float: left;
+}
+
+.dj-notice-c .dj-noticelist-con ul li a {
+	display: block;
+	width: 100%;
+	float: left;
+	line-height: 31px;
+	color: #5a1e1d;
+	outline: 0;
+}
+
+.article-tit-c {
+	width: 100%;
+	border-bottom: 1px solid #f0f0f0;
+	display: block;
+	float: left;
+}
+
+.article-tit-c h2 {
+	font-weight: normal;
+}
+
+.article-content-c .art-tit-left {
+	float: left;
+}
+
+.article-content-c .art-tit-right {
+	float: left;
+}
+
+.article-content-c {
+	margin-top: 30px;
+	width: 100%;
+	float: left;
+}
+
+.article-content-c>ul>li p {
+	font-size: 16px;
+}
+
+.article-btn {
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.article-btn .btn {
+	width: 200px;
+	background: #ca2d13;
+	outline: 0;
+	height: 45px;
+	color: #ffffff;
+}
+
+.dj-survey-con {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.dj-survey-tit {
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+}
+
+.dj-survey-info {
+	padding: 10px;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+.dj-survey-content {
+	width: 100%;
+	margin: 20px auto;
+}
+
+.dj-survey-con .radio {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background: #f3f6fb;
+	padding-left: 30px;
+	margin-bottom: 10px;
+}
+
+.dj-survey-btn {
+	text-align: center;
+}
+
+/*=====排行榜====*/
+.dj-ch-tit {
+	width: 100%;
+}
+
+.dj-ch-tit .breadcrumb {
+	background: #ffffff;
+	border-top: 1px solid #cecece;
+	font-weight: bold;
+}
+
+.dj-chart-con {
+	background: #ffffff;
+	border-left: 1px solid #cecece;
+	border-right: 1px solid #cecece;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #cecece;
+}
+
+.dj-ch-con table {
+	width: 97%;
+	margin: 0 auto;
+}
+
+.dj-ch-con table a {
+	color: #494949;
+	font-size: 14px;
+}
+
+.dj-ch-con table a:hover {
+	color: #b4413d;
+}
+
+.dj-ch-con table .num-ch {
+	float: left;
+}
+
+.dj-ch-con table .right-cou {
+	float: right;
+	text-align: right;
+	margin-right: 20px;
+	color: #777777;
+}
+
+.tlabel{
+	position: relative;
+	left: 25px;
+	top: -22px;
+}
+
+.n{
+	position: relative;
+	top: 20px;
+}
+
