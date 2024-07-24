@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>南湖天地警务室</title>
+	</head>
+
+	<body class="default-dj">
+		<div>
+			<link rel="stylesheet" href="css/reset.css">
+			<link rel="stylesheet" href="css/zTreeStyle.css">
+			<link rel="stylesheet" href="css/bootstrap.min.css">
+			<link rel="stylesheet" href="css/list-s.css">
+		</div>
+		<link rel="stylesheet" href="css/dj-examstyle.css">
+		<div>
+			<script src="js/jquery.min.js"></script>
+			<script src="js/layer.js"></script>
+			<script src="js/jquery.ztree.core.js"></script>
+			<script src="js/jquery.ztree.excheck.js"></script>
+			<script src="js/bootstrap.min.js"></script>
+		</div>
+		<script src="js/vconsole.min.js"></script>
+		<style type="text/css">
+			.breadcrumb {
+				margin-top: 30px;
+			}
+		</style>
+
+		<div class="dj-top-banner">
+			<img src="img/logo3.png" alt="">
+		</div>
+		<label>
+			<span id="scoreText" style="display: none;position: relative;font-size: 30px;top: 30px;left: 30px;">
+				您的最终得分为：
+				<div id="fnscore" style="position: relative;top: 25px;left: 190px;;font-size: 60px;font-weight: bold;">
+					10
+				</div>
+			</span>
+		</label>
+
+		<div id="x1" class="dj-content-ex">
+			<div class="pct-list-con" style="width: 100%;">
+				<div class="pct-exam-list">
+					<form id="form" method="post">
+						<div class="n">
+							<span class="title-tm">
+								1.测试题目1，
+							</span><br />
+							<div class="pct-exam-one">
+								<p><input id="t11" type="radio" name="t1" value="A" /><label for="t11"
+										class="tlabel">测试选项1</label></p>
+								<p><input id="t12" type="radio" name="t1" value="B" /><label for="t12"
+										class="tlabel">测试选项2</label></p>
+								<p><input id="t13" type="radio" name="t1" value="C" /><label for="t13"
+										class="tlabel">测试选项3</label></p>
+								<p><input id="t14" type="radio" name="t1" value="D" /><label for="t14"
+										class="tlabel">测试选项4</label></p>
+							</div>
+							<span id="s1" style="display: none;font-size: 20px;color: red;">
+								回答错误：0分
+							</span>
+							<span id="c1" style="display: none;">
+								正确答案：
+								<span id="d1">
+									C
+								</span>
+							</span>
+						</div>
+
+						<br /><br /><br /><br /><br />
+
+						<div class="n">
+							<span class="title-tm">
+								2.测试题目1，
+							</span>
+							<div class="pct-exam-one">
+								<p><input id="t21" type="radio" name="t2" value="A" /><label for="t21"
+										class="tlabel">测试选项1</label></p>
+								<p><input id="t22" type="radio" name="t2" value="B" /><label for="t22"
+										class="tlabel">测试选项2</label></p>
+								<p><input id="t23" type="radio" name="t2" value="C" /><label for="t23"
+										class="tlabel">测试选项3</label></p>
+								<p><input id="t24" type="radio" name="t2" value="D" /><label for="t24"
+										class="tlabel">测试选项4</label></p>
+							</div>
+							<span id="s2" style="display: none;font-size: 20px;color: red;">
+								回答错误：0分
+							</span>
+							<span id="c2" style="display: none;">
+								正确答案：
+								<span id="d2">
+									C
+								</span>
+							</span>
+						</div>
+
+						<br /><br /><br /><br /><br />
+
+						<div class="n">
+							<span class="title-tm">
+								3.测试题目1，
+							</span>
+							<div class="pct-exam-one">
+								<p><input id="t31" type="radio" name="t3" value="A" /><label for="t31"
+										class="tlabel">测试选项1</label></p>
+								<p><input id="t32" type="radio" name="t3" value="B" /><label for="t32"
+										class="tlabel">测试选项2</label></p>
+								<p><input id="t33" type="radio" name="t3" value="C" /><label for="t33"
+										class="tlabel">测试选项3</label></p>
+								<p><input id="t34" type="radio" name="t3" value="D" /><label for="t34"
+										class="tlabel">测试选项4</label></p>
+							</div>
+							<span id="s3" style="display: none;font-size: 20px;color: red;">
+								回答错误：0分
+							</span>
+							<span id="c3" style="display: none;">
+								正确答案：
+								<span id="d3">
+									C
+								</span>
+							</span>
+						</div>
+
+						<br /><br /><br /><br /><br />
+
+						<div class="n">
+							<span class="title-tm">
+								4.测试题目1，
+							</span>
+							<div class="pct-exam-one">
+								<p><input id="t41" type="radio" name="t4" value="A" /><label for="t41"
+										class="tlabel">测试选项1</label></p>
+								<p><input id="t42" type="radio" name="t4" value="B" /><label for="t42"
+										class="tlabel">测试选项2</label></p>
+								<p><input id="t43" type="radio" name="t4" value="C" /><label for="t43"
+										class="tlabel">测试选项3</label></p>
+								<p><input id="t44" type="radio" name="t4" value="D" /><label for="t44"
+										class="tlabel">测试选项4</label></p>
+							</div>
+							<span id="s4" style="display: none;font-size: 20px;color: red;">
+								回答错误：0分
+							</span>
+							<span id="c5" style="display: none;">
+								正确答案：
+								<span id="d4">
+									C
+								</span>
+							</span>
+						</div>
+
+						<br /><br /><br /><br /><br />
+
+						<div class="n">
+							<span class="title-tm">
+								5.测试题目1，
+							</span>
+							<div class="pct-exam-one">
+								<p><input id="t51" type="radio" name="t5" value="A" /><label for="t51"
+										class="tlabel">测试选项1</label></p>
+								<p><input id="t52" type="radio" name="t5" value="B" /><label for="t52"
+										class="tlabel">测试选项2</label></p>
+								<p><input id="t53" type="radio" name="t5" value="C" /><label for="t53"
+										class="tlabel">测试选项3</label></p>
+								<p><input id="t54" type="radio" name="t5" value="D" /><label for="t54"
+										class="tlabel">测试选项4</label></p>
+							</div>
+
+							<span id="s5" style="display: none;font-size: 20px;color: red;">
+								回答错误：0分
+							</span>
+							<span id="c5" style="display: none;">
+								正确答案：
+								<span id="d5">
+									C
+								</span>
+							</span>
+							<!-- 						<div onmouseup="result()"></div> -->
+
+						</div>
+					</form>
+				</div>
+				<!-- 			<button class="btn btn-output" onclick="back()">退出</button> -->
+
+			</div>
+
+
+
+			<div class="pct-exam-btn" style="margin-top: 30px;">
+				<div class="pct-exam-btncon" style="text-align: right;">
+					<p>
+						<button id="result" class="btn btn-submit" onclick="result();" type="button">提交答案</button>
+						<button id="result" class="btn btn-output" type="button" onclick="back()">退出考试</button>
+					</p>
+				</div>
+			</div>
+
+
+
+			<!-- <div class="btn btn-submit" id="result" onmouseover="c1(this)" onmousemove="c2(this)" onmouseleave="c3(this)" onmouseup="result()" >提交</div> -->
+
+		</div>
+
+		<br /><br /><br /><br /><br />
+
+
+
+		<script src="js/tiku.js"></script>
+		<script>
+			function c1(a) {
+				a.style.backgroundColor = "grey";
+				a.style.color = "black";
+			}
+
+			function c2(a) {
+				a.style.backgroundColor = "darkgrey";
+				a.style.color = "darked";
+			}
+
+			function c3(a) {
+				a.style.backgroundColor = "darkblue";
+				a.style.color = "black";
+			}
+
+			var tiType = ["禁毒", "禁毒", "禁毒", "禁毒", "禁毒"]
+			var anser = [];
+			var score = [10, 10, 10, 10, 10];
+			var userScore = 0;
+			var isResult = false;
+
+			function rollT(type) {
+
+				var randoms = []
+				var rd = 0
+				var xd = 0
+
+				if (xd <= 5) {
+					if (type == "反诈") {
+						// 1~85
+						rd = Math.round(Math.random() * 84);
+
+						var x = randoms.length;
+
+						while (x--) {
+
+							if (randoms[x] === rd) {
+								rd = Math.round(rd * 0.758) + 1
+								return false
+							}
+
+							return true
+						}
+						randoms[xd] = rd
+						return randoms
+					} else if (type == "交通") {
+						// 86~186
+						rd = Math.round(Math.random() * 100 + 85);
+						var x = randoms.length;
+
+						while (x--) {
+
+							if (randoms[x] === rd) {
+								rd = Math.round(rd * 0.758) + 1
+								return false
+							}
+
+							return true
+						}
+						randoms[xd] = rd
+						return randoms
+					} else if (type == "消防") {
+						//187~246
+						rd = Math.round(Math.random() * 59 + 186);
+						var x = randoms.length;
+						
+						while (x--) {
+						
+							if (randoms[x] === rd) {
+								rd = Math.round(rd * 0.758) + 1
+								return false
+							}
+						
+							return true
+						}
+						randoms[xd] = rd
+						return randoms
+					} else if (type == "生态文明") {
+						//298~347
+						rd = Math.round(Math.random() * 49 + 297);
+						var x = randoms.length;
+						
+						while (x--) {
+						
+							if (randoms[x] === rd) {
+								rd = Math.round(rd * 0.758) + 1
+								return false
+							}
+						
+							return true
+						}
+						randoms[xd] = rd
+						return randoms
+					} else if (type == "食品安全") {
+						//348~387
+						rd = Math.round(Math.random() * 39 + 347);
+						var x = randoms.length;
+						
+						while (x--) {
+						
+							if (randoms[x] === rd) {
+								rd = Math.round(rd * 0.758) + 1
+								return false
+							}
+						
+							return true
+						}
+						randoms[xd] = rd
+						return randoms
+					} else if (type == "网络安全") {
+						//388~437
+						rd = Math.round(Math.random() * 49 + 387);
+						var x = randoms.length;
+						
+						while (x--) {
+						
+							if (randoms[x] === rd) {
+								rd = Math.round(rd * 0.758) + 1
+								return false
+							}
+						
+							return true
+						}
+						randoms[xd] = rd
+						return randoms
+					} else if (type == "反假") {
+						//438~463
+						rd = Math.round(Math.random() * 25 + 437);
+						var x = randoms.length;
+						
+						while (x--) {
+						
+							if (randoms[x] === rd) {
+								rd = Math.round(rd * 0.758) + 1
+								return false
+							}
+						
+							return true
+						}
+						randoms[xd] = rd
+						return randoms
+					} else if (type == "综合执法") {
+						//469~493
+						rd = Math.round(Math.random() * 24 + 468);
+						var x = randoms.length;
+						
+						while (x--) {
+						
+							if (randoms[x] === rd) {
+								rd = Math.round(rd * 0.758) + 1
+								return false
+							}
+						
+							return true
+						}
+						randoms[xd] = rd
+						return randoms
+					} else if (type == "禁毒") {
+						//247~297
+						rd = Math.round(Math.random() * 50 + 246);
+						var x = randoms.length;
+						
+						while (x--) {
+						
+							if (randoms[x] === rd) {
+								rd = Math.round(rd * 0.758) + 1
+								return false
+							}
+						
+							return true
+						}
+						randoms[xd] = rd
+						return randoms
+					}
+				}
+
+				// if(type == "反诈"){
+				// 	return Math.round(Math.random()*85);
+				// }else{
+				// 	return Math.round(Math.random()*85);
+				// }
+
+			}
+
+			function setText(num, index) {
+				var ti = document.getElementsByClassName("n");
+				ti[num].getElementsByTagName("span")[0].innerHTML = (num + 1) + "、" + tiku[index].text
+			}
+
+			function setValue(num, index) {
+				var ti = document.getElementsByClassName("n");
+				var values = ti[num].getElementsByTagName("p");
+				values[0].getElementsByTagName("label")[0].innerHTML = "A、" + tiku[index].A;
+
+				values[1].getElementsByTagName("label")[0].innerHTML = "B、" + tiku[index].B;
+
+				if (tiku[index].C.length <= 0) {
+					values[2].style.display = "none";
+				} else {
+					values[2].getElementsByTagName("label")[0].innerHTML = "C、" + tiku[index].C;
+				}
+
+				if (tiku[index].D.length <= 0) {
+					values[3].style.display = "none";
+				} else {
+					values[3].getElementsByTagName("label")[0].innerHTML = "D、" + tiku[index].D;
+				}
+			}
+
+			function result() {
+				if (isResult) {
+					return;
+				}
+				isResult = true;
+				var r = confirm("您确定要当前提交考试吗？")
+				if (r) {
+					// window.location.href = "../nanhu_jwz/index.html";
+					for (var i = 0; i < tiType.length; i++) {
+						var tx = document.getElementsByName("t" + (i + 1));
+						var str = "";
+						for (var j = 0; j < tx.length; j++) {
+							if (tx[j].checked) {
+								str += tx[j].value;
+							}
+						}
+						if (str == anser[i]) {
+							userScore += score[i]
+							document.getElementById("s" + (i + 1)).innerHTML = "回答正确，10分";
+						}
+						document.getElementById("d" + (i + 1)).innerHTML = anser[i];
+
+
+					}
+					var allInp = document.getElementsByTagName("input");
+					for (var a = 0; a < allInp.length; a++) {
+						allInp[a].onclick = function() {
+							return false;
+						}
+					}
+					var sp = document.getElementsByTagName("span");
+					for (var s = 0; s < sp.length; s++) {
+						sp[s].style.display = "";
+					}
+					document.getElementById("result").style.display = "none";
+					document.getElementById("fnscore").innerHTML = userScore;
+					document.getElementById("scoreText").style.display = ""
+				}
+			}
+
+			function back() {
+				var r = confirm("您确定要退出当前考试吗？");
+				if (r) {
+					window.location.href = "../nanhu_jwz/index.html";
+				}
+			}
+
+			for (var i = 0; i < 5; i++) {
+				var tIndex = rollT(tiType[i]);
+				setText(i, tIndex);
+				if (i < 5) {
+					setValue(i, tIndex);
+				}
+				anser[i] = tiku[tIndex].yes
+			}
+
+			document.getElementById('result').addEventListener('click', function() {
+				window.scrollTo({
+					top: 0,
+					left: 0,
+					behavior: 'smooth' // 可选，平滑滚动效果
+				});
+			});
+		</script>
+
+		<div class="footer">
+			<div class="dj-footer">
+				<p> 主办单位：南湖天地警务室<br> 技术支持：<br> 建议使用谷歌浏览器 </p>
+			</div>
+		</div>
+	</body>
+</html>
