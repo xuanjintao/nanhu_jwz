@@ -7,18 +7,18 @@
 
 	<body class="default-dj">
 		<div>
-			<link rel="stylesheet" href="/css/reset.css">
-			<link rel="stylesheet" href="/css/zTreeStyle.css">
-			<link rel="stylesheet" href="/css/bootstrap.min.css">
-			<link rel="stylesheet" href="/css/list-s.css">
+			<link rel="stylesheet" href="css/reset.css">
+			<link rel="stylesheet" href="css/zTreeStyle.css">
+			<link rel="stylesheet" href="css/bootstrap.min.css">
+			<link rel="stylesheet" href="css/list-s.css">
 		</div>
 		<link rel="stylesheet" href="css/dj-examstyle.css">
 		<div>
-			<script src="/js/jquery.min.js"></script>
-			<script src="/js/layer.js"></script>
-			<script src="/js/jquery.ztree.core.js"></script>
-			<script src="/js/jquery.ztree.excheck.js"></script>
-			<script src="/js/bootstrap.min.js"></script>
+			<script src="js/jquery.min.js"></script>
+			<script src="js/layer.js"></script>
+			<script src="js/jquery.ztree.core.js"></script>
+			<script src="js/jquery.ztree.excheck.js"></script>
+			<script src="js/bootstrap.min.js"></script>
 		</div>
 		<script src="js/vconsole.min.js"></script>
 		<style type="text/css">
@@ -31,7 +31,7 @@
 			<img src="img/logo3.png" alt="">
 		</div>
 		<label>
-			<span id="scoreText" style="display: none;position: relative;font-size: 30px;top: 30px;left: 30px;">
+			<span id="scoreText" style="display: none;position: relative;font-size: 30px;top: 30px;left: 1200px;">
 				您的最终得分为：
 				<div id="fnscore" style="position: relative;top: 25px;left: 190px;;font-size: 60px;font-weight: bold;">
 					10
@@ -349,8 +349,8 @@
 						randoms[xd] = rd
 						return randoms
 					} else if (type == "综合执法") {
-						//469~493
-						rd = Math.round(Math.random() * 24 + 468);
+						//464~488
+						rd = Math.round(Math.random() * 24 + 463);
 						var x = randoms.length;
 						
 						while (x--) {
@@ -364,7 +364,7 @@
 						}
 						randoms[xd] = rd
 						return randoms
-					}else if (type == "禁毒") {
+					} else if (type == "禁毒") {
 						//247~297
 						rd = Math.round(Math.random() * 50 + 246);
 						var x = randoms.length;
@@ -417,10 +417,10 @@
 			}
 
 			function result() {
-				if (isResult) {
-					return;
-				}
-				isResult = true;
+				// if (isResult) {
+				// 	return;
+				// }
+				// isResult = true;
 				var r = confirm("您确定要当前提交考试吗？")
 				if (r) {
 					// window.location.href = "../nanhu_jwz/index.html";
@@ -453,6 +453,11 @@
 					document.getElementById("result").style.display = "none";
 					document.getElementById("fnscore").innerHTML = userScore;
 					document.getElementById("scoreText").style.display = ""
+					window.scrollTo({
+						top: 0,
+						left: 0,
+						behavior: 'smooth' // 可选，平滑滚动效果
+					});
 				}
 			}
 
@@ -472,13 +477,13 @@
 				anser[i] = tiku[tIndex].yes
 			}
 
-			document.getElementById('result').addEventListener('click', function() {
-				window.scrollTo({
-					top: 0,
-					left: 0,
-					behavior: 'smooth' // 可选，平滑滚动效果
-				});
-			});
+			// document.getElementById('result').addEventListener('click', function() {
+			// 	window.scrollTo({
+			// 		top: 0,
+			// 		left: 0,
+			// 		behavior: 'smooth' // 可选，平滑滚动效果
+			// 	});
+			// });
 		</script>
 
 		<div class="footer">

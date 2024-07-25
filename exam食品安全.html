@@ -31,7 +31,7 @@
 			<img src="img/logo3.png" alt="">
 		</div>
 		<label>
-			<span id="scoreText" style="display: none;position: relative;font-size: 30px;top: 30px;left: 30px;">
+			<span id="scoreText" style="display: none;position: relative;font-size: 30px;top: 30px;left: 1200px;">
 				您的最终得分为：
 				<div id="fnscore" style="position: relative;top: 25px;left: 190px;;font-size: 60px;font-weight: bold;">
 					10
@@ -417,10 +417,10 @@
 			}
 
 			function result() {
-				if (isResult) {
-					return;
-				}
-				isResult = true;
+				// if (isResult) {
+				// 	return;
+				// }
+				// isResult = true;
 				var r = confirm("您确定要当前提交考试吗？")
 				if (r) {
 					// window.location.href = "../nanhu_jwz/index.html";
@@ -453,6 +453,11 @@
 					document.getElementById("result").style.display = "none";
 					document.getElementById("fnscore").innerHTML = userScore;
 					document.getElementById("scoreText").style.display = ""
+					window.scrollTo({
+						top: 0,
+						left: 0,
+						behavior: 'smooth' // 可选，平滑滚动效果
+					});
 				}
 			}
 
@@ -472,13 +477,13 @@
 				anser[i] = tiku[tIndex].yes
 			}
 
-			document.getElementById('result').addEventListener('click', function() {
-				window.scrollTo({
-					top: 0,
-					left: 0,
-					behavior: 'smooth' // 可选，平滑滚动效果
-				});
-			});
+			// document.getElementById('result').addEventListener('click', function() {
+			// 	window.scrollTo({
+			// 		top: 0,
+			// 		left: 0,
+			// 		behavior: 'smooth' // 可选，平滑滚动效果
+			// 	});
+			// });
 		</script>
 
 		<div class="footer">
