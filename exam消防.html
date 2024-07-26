@@ -30,14 +30,14 @@
 		<div class="dj-top-banner">
 			<img src="img/logo3.png" alt="">
 		</div>
-		<label>
+<!-- 		<label>
 			<span id="scoreText" style="display: none;position: relative;font-size: 30px;top: 30px;left: 1200px;">
 				您的最终得分为：
 				<div id="fnscore" style="position: relative;top: 25px;left: 190px;;font-size: 60px;font-weight: bold;">
 					10
 				</div>
 			</span>
-		</label>
+		</label> -->
 
 		<div id="x1" class="dj-content-ex">
 			<div class="pct-list-con" style="width: 100%;">
@@ -309,6 +309,15 @@
 					for (var s = 0; s < sp.length; s++) {
 						sp[s].style.display = "";
 					}
+					alert("您的最终得分为："+userScore+"分")
+					setTimeout(function(){
+						window.scrollTo({
+							top: 0,
+							left: 0,
+							behavior: 'smooth' // 可选，平滑滚动效果
+						});
+					})
+					
 					document.getElementById("result").style.display = "none";
 					document.getElementById("fnscore").innerHTML = userScore;
 					document.getElementById("scoreText").style.display = ""
