@@ -30,14 +30,14 @@
 		<div class="dj-top-banner">
 			<img src="img/logo3.png" alt="">
 		</div>
-		<label>
+<!-- 		<label>
 			<span id="scoreText" style="display: none;position: relative;font-size: 30px;top: 30px;left: 1200px;">
 				您的最终得分为：
 				<div id="fnscore" style="position: relative;top: 25px;left: 190px;;font-size: 60px;font-weight: bold;">
 					10
 				</div>
 			</span>
-		</label>
+		</label> -->
 
 		<div id="x1" class="dj-content-ex">
 			<div class="pct-list-con" style="width: 100%;">
@@ -230,165 +230,23 @@
 
 			function rollT(type) {
 
-				var randoms = []
-				var rd = 0
-				var xd = 0
+				let randoms = []
+				let rd = 0
+				let xd = 0
 
-				if (xd <= 5) {
-					if (type == "反诈") {
-						// 1~85
-						rd = Math.round(Math.random() * 84);
-
-						var x = randoms.length;
-
-						while (x--) {
-
-							if (randoms[x] === rd) {
-								rd = Math.round(rd * 0.758) + 1
-								return false
-							}
-
-							return true
-						}
-						randoms[xd] = rd
-						return randoms
-					} else if (type == "交通") {
-						// 86~186
-						rd = Math.round(Math.random() * 100 + 85);
-						var x = randoms.length;
-
-						while (x--) {
-
-							if (randoms[x] === rd) {
-								rd = Math.round(rd * 0.758) + 1
-								return false
-							}
-
-							return true
-						}
-						randoms[xd] = rd
-						return randoms
-					} else if (type == "消防") {
-						//187~246
-						rd = Math.round(Math.random() * 59 + 186);
-						var x = randoms.length;
-						
-						while (x--) {
-						
-							if (randoms[x] === rd) {
-								rd = Math.round(rd * 0.758) + 1
-								return false
-							}
-						
-							return true
-						}
-						randoms[xd] = rd
-						return randoms
-					} else if (type == "生态文明") {
-						//298~347
-						rd = Math.round(Math.random() * 49 + 297);
-						var x = randoms.length;
-						
-						while (x--) {
-						
-							if (randoms[x] === rd) {
-								rd = Math.round(rd * 0.758) + 1
-								return false
-							}
-						
-							return true
-						}
-						randoms[xd] = rd
-						return randoms
-					} else if (type == "食品安全") {
-						//348~387
-						rd = Math.round(Math.random() * 39 + 347);
-						var x = randoms.length;
-						
-						while (x--) {
-						
-							if (randoms[x] === rd) {
-								rd = Math.round(rd * 0.758) + 1
-								return false
-							}
-						
-							return true
-						}
-						randoms[xd] = rd
-						return randoms
-					} else if (type == "网络安全") {
-						//388~437
-						rd = Math.round(Math.random() * 49 + 387);
-						var x = randoms.length;
-						
-						while (x--) {
-						
-							if (randoms[x] === rd) {
-								rd = Math.round(rd * 0.758) + 1
-								return false
-							}
-						
-							return true
-						}
-						randoms[xd] = rd
-						return randoms
-					} else if (type == "反假") {
+				if (xd <= 4) {
+					if (type == "反假") {
 						//438~463
 						rd = Math.round(Math.random() * 25 + 437);
-						var x = randoms.length;
-						
-						while (x--) {
-						
-							if (randoms[x] === rd) {
-								rd = Math.round(rd * 0.758) + 1
-								return false
-							}
-						
-							return true
+						let x = randoms.length;
+						if(randoms.indexOf("rd") === -1){
+							randoms[xd] = rd
+							xd++
 						}
-						randoms[xd] = rd
-						return randoms
-					} else if (type == "综合执法") {
-						//469~493
-						rd = Math.round(Math.random() * 24 + 468);
-						var x = randoms.length;
 						
-						while (x--) {
-						
-							if (randoms[x] === rd) {
-								rd = Math.round(rd * 0.758) + 1
-								return false
-							}
-						
-							return true
-						}
-						randoms[xd] = rd
-						return randoms
-					} else if (type == "禁毒") {
-						//247~297
-						rd = Math.round(Math.random() * 50 + 246);
-						var x = randoms.length;
-						
-						while (x--) {
-						
-							if (randoms[x] === rd) {
-								rd = Math.round(rd * 0.758) + 1
-								return false
-							}
-						
-							return true
-						}
-						randoms[xd] = rd
 						return randoms
 					}
 				}
-
-				// if(type == "反诈"){
-				// 	return Math.round(Math.random()*85);
-				// }else{
-				// 	return Math.round(Math.random()*85);
-				// }
-
 			}
 
 			function setText(num, index) {
@@ -424,6 +282,9 @@
 				var r = confirm("您确定要当前提交考试吗？")
 				if (r) {
 					// window.location.href = "../nanhu_jwz/index.html";
+					
+					
+					
 					for (var i = 0; i < tiType.length; i++) {
 						var tx = document.getElementsByName("t" + (i + 1));
 						var str = "";
@@ -450,6 +311,9 @@
 					for (var s = 0; s < sp.length; s++) {
 						sp[s].style.display = "";
 					}
+					
+					alert("您的最终得分为："+userScore+"分")
+					
 					document.getElementById("result").style.display = "none";
 					document.getElementById("fnscore").innerHTML = userScore;
 					document.getElementById("scoreText").style.display = ""

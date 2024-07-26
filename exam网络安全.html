@@ -234,160 +234,19 @@
 				var rd = 0
 				var xd = 0
 
-				if (xd <= 5) {
-					if (type == "反诈") {
-						// 1~85
-						rd = Math.round(Math.random() * 84);
-
-						var x = randoms.length;
-
-						while (x--) {
-
-							if (randoms[x] === rd) {
-								rd = Math.round(rd * 0.758) + 1
-								return false
-							}
-
-							return true
-						}
-						randoms[xd] = rd
-						return randoms
-					} else if (type == "交通") {
-						// 86~186
-						rd = Math.round(Math.random() * 100 + 85);
-						var x = randoms.length;
-
-						while (x--) {
-
-							if (randoms[x] === rd) {
-								rd = Math.round(rd * 0.758) + 1
-								return false
-							}
-
-							return true
-						}
-						randoms[xd] = rd
-						return randoms
-					} else if (type == "消防") {
-						//187~246
-						rd = Math.round(Math.random() * 59 + 186);
-						var x = randoms.length;
-						
-						while (x--) {
-						
-							if (randoms[x] === rd) {
-								rd = Math.round(rd * 0.758) + 1
-								return false
-							}
-						
-							return true
-						}
-						randoms[xd] = rd
-						return randoms
-					} else if (type == "生态文明") {
-						//298~347
-						rd = Math.round(Math.random() * 49 + 297);
-						var x = randoms.length;
-						
-						while (x--) {
-						
-							if (randoms[x] === rd) {
-								rd = Math.round(rd * 0.758) + 1
-								return false
-							}
-						
-							return true
-						}
-						randoms[xd] = rd
-						return randoms
-					} else if (type == "食品安全") {
-						//348~387
-						rd = Math.round(Math.random() * 39 + 347);
-						var x = randoms.length;
-						
-						while (x--) {
-						
-							if (randoms[x] === rd) {
-								rd = Math.round(rd * 0.758) + 1
-								return false
-							}
-						
-							return true
-						}
-						randoms[xd] = rd
-						return randoms
-					} else if (type == "网络安全") {
+				if (xd <= 4) {
+					if (type == "网络安全") {
 						//388~437
 						rd = Math.round(Math.random() * 49 + 387);
-						var x = randoms.length;
-						
-						while (x--) {
-						
-							if (randoms[x] === rd) {
-								rd = Math.round(rd * 0.758) + 1
-								return false
-							}
-						
-							return true
+						let x = randoms.length;
+						if(randoms.indexOf("rd") === -1){
+							randoms[xd] = rd
+							xd++
 						}
-						randoms[xd] = rd
-						return randoms
-					} else if (type == "反假") {
-						//438~463
-						rd = Math.round(Math.random() * 25 + 437);
-						var x = randoms.length;
 						
-						while (x--) {
-						
-							if (randoms[x] === rd) {
-								rd = Math.round(rd * 0.758) + 1
-								return false
-							}
-						
-							return true
-						}
-						randoms[xd] = rd
-						return randoms
-					} else if (type == "综合执法") {
-						//469~493
-						rd = Math.round(Math.random() * 24 + 468);
-						var x = randoms.length;
-						
-						while (x--) {
-						
-							if (randoms[x] === rd) {
-								rd = Math.round(rd * 0.758) + 1
-								return false
-							}
-						
-							return true
-						}
-						randoms[xd] = rd
-						return randoms
-					} else if (type == "禁毒") {
-						//247~297
-						rd = Math.round(Math.random() * 50 + 246);
-						var x = randoms.length;
-						
-						while (x--) {
-						
-							if (randoms[x] === rd) {
-								rd = Math.round(rd * 0.758) + 1
-								return false
-							}
-						
-							return true
-						}
-						randoms[xd] = rd
 						return randoms
 					}
 				}
-
-				// if(type == "反诈"){
-				// 	return Math.round(Math.random()*85);
-				// }else{
-				// 	return Math.round(Math.random()*85);
-				// }
 
 			}
 
