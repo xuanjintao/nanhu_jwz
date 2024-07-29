@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 	<head>
-		<title>南湖天地警务室</title>
-		<link rel="stylesheet" href="css/tas.css">
-	</head>
-	<body>
-		<div>
-			<script src="js/jquery.min.js"></script>
-			<script src="js/layer.js"></script>
-			<script src="js/jquery.ztree.core.js"></script>
-			<script src="js/jquery.ztree.excheck.js"></script>
-			<script src="js/bootstrap.min.js"></script>
-		</div>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>铺满整个网页的图片</title>
 		<style>
 			.examLogin {
-				width: 100%;
-				height: 100%;
-				background: url(img/background.png) no-repeat;
-				background-size: 100% 100%;
-				overflow: hidden;
+				margin: 0 0 0 0;
+				height: 100vh;
+				/* 设置高度为视口高度 */
+				background-image: url('img/background1.png'), url('img/background2.png'), url('img/background3.png'), url('img/background4.png');
+				/* 设置背景图片 */
+				background-size: 50.1% 50.1%;
+				/* 每张图片占据一半的宽度和高度 */
+				background-repeat: no-repeat;
+				/* 不重复背景图片 */
+				background-position: top left, top right, bottom left, bottom right;
+				/* 定位每张图片 */
 			}
 		</style>
+	</head>
+	<body>
 		<div id="app">
 			<div onclick="goto()" class="examLogin">
 			</div>
