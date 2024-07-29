@@ -1441,14 +1441,15 @@ h2 {
 	text-align: center;
 	background: url('../img/bannertop.png') no-repeat center top;
 	background-size: cover;
-	min-height: 198px;
+/* 	min-height: 100px; */
+	height: 100px;
 	border-bottom: 8px solid #f7393b;
 }
 
 .dj-top-banner img {
 	width: auto;
 	text-align: center;
-	margin: 75px auto 50px;
+	margin: 25px auto 50px;
 }
 
 .ks-mbx {
