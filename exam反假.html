@@ -241,14 +241,18 @@
 				if (xd <= 5) {
 					if (type === "反假") {
 						//438~463
-						rd = Math.round(Math.random() * 25 + 438);
+						rd = Math.round(Math.random() * 25 + 437);
 						// 仅当 Set 中不存在 rd 时才添加它  
 						if (!randoms.has(rd)) {
 							randoms.add(rd); // 添加 rd  
 							xd++; // 增加 xd 计数器  
 							return rd // 将 Set 转换回数组并返回  
 						} else {
-							return (Math.round(rd * 0.7245647))
+							rd = Math.round((rd * 0.5) + ((Math.random() * 12) + 218))
+							randoms.add(rd); // 添加 rd
+							xd++; // 增加 xd 计数器  
+							return rd // 将 Set 转换回数组并返回
+							// 219~231
 						}
 
 					}
