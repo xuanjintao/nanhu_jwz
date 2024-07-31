@@ -1133,12 +1133,12 @@ h2 {
 }
 
 .pct-exam-one label {
-	font-size: 16px;
-	line-height: 35px;
+	font-size: 12px;
+/* 	line-height: 25px; */
 }
 
 .pct-exam-one p {
-	margin-bottom: -20px;
+	margin-bottom: -30px;
 	line-height: -20px;
 }
 
