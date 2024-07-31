@@ -40,8 +40,9 @@
 					<form id="form" method="post">
 						<div class="n">
 
-							<div class="Stext" style="font-size: 25px;position: absolute; top: -30px;">一、随机题型，共五题，一共100分</div>
-							
+							<div class="Stext" style="font-size: 25px;position: absolute; top: -30px;">一、随机题型，共五题，一共100分
+							</div>
+
 							<div class="pct-exam-one">
 								<span class="title-tm">
 									1.测试题目1，
@@ -193,7 +194,7 @@
 					<p>
 						<button id="result" class="btn btn-submit" onclick="result();" type="button">提交答案</button>
 						<button id="result" class="btn btn-output" type="button" onclick="back()">退出考试</button>
-						<button id="result" class="btn btn-refresh" onclick="refresh();" type="button">刷新题目</button>
+						<button id="result" class="btn btn-refresh" onclick="back();" type="button">退出考试</button>
 
 					</p>
 				</div>
@@ -232,35 +233,27 @@
 			var userScore = 0;
 			var isResult = false;
 			var randoms = new Set(); // 使用 Set 来存储唯一值
+			var nm=0
+			
+			function generateUniqueRandomArray(length, max) {
+			    const uniqueNumbers = new Set();  
+			
+			    while (uniqueNumbers.size < length) {  
+			        const randomNum = Math.floor(Math.random() * max+298);  
+			        uniqueNumbers.add(randomNum);
+			    }  
+			
+			    return Array.from(uniqueNumbers);  
+			}  
+			// 298~347
+			const randomArray = generateUniqueRandomArray(5, 49);  
+			console.log(randomArray);
 			function rollT(type) {
-				let num = [];
-
-				let rd = 0;
-				let xd = 0;
-
-				if (xd <= 5) {
-					if (type === "生态文明") {
-						//298~347
-						rd = Math.round(Math.random() * 49 + 297);
-						// 仅当 Set 中不存在 rd 时才添加它  
-						if (!randoms.has(rd)) {
-							randoms.add(rd); // 添加 rd  
-							xd++; // 增加 xd 计数器  
-							return rd // 将 Set 转换回数组并返回  
-						} else {
-							rd = Math.round((rd * 0.5) + ((Math.random() * 24) + 148))
-							randoms.add(rd); // 添加 rd
-							xd++; // 增加 xd 计数器  
-							return rd // 将 Set 转换回数组并返回
-							// 149~173
-						}
-
-					}
-				} else {
-					randoms.clear()
+				if(type === "生态文明"){
+					return randomArray[nm]
 				}
+				
 			}
-
 			function setText(num, index) {
 				var ti = document.getElementsByClassName("n");
 				ti[num].getElementsByTagName("span")[0].innerHTML = (num + 1) + "、" + tiku[index].text
@@ -347,26 +340,20 @@
 				}
 			}
 
-			function refresh() {
-				window.location.href = "exam生态文明.html"
-			}
+			// function refresh() {
+			// 	window.location.href = "exam生态文明.html"
+			// }
 
 			for (var i = 0; i < 5; i++) {
 				var tIndex = rollT(tiType[i]);
 				setText(i, tIndex);
 				if (i < 5) {
 					setValue(i, tIndex);
+					nm++;
 				}
 				anser[i] = tiku[tIndex].yes
 			}
 
-			// document.getElementById('result').addEventListener('click', function() {
-			// 	window.scrollTo({
-			// 		top: 0,
-			// 		left: 0,
-			// 		behavior: 'smooth' // 可选，平滑滚动效果
-			// 	});
-			// });
 		</script>
 
 		<div class="footer">
