@@ -30,14 +30,7 @@
 		<div class="dj-top-banner">
 			<img src="img/logo3.png" alt="">
 		</div>
-		<!-- 		<label>
-			<span id="scoreText" style="display: none;position: relative;font-size: 30px;top: 30px;left: 1200px;">
-				您的最终得分为：
-				<div id="fnscore" style="position: relative;top: 25px;left: 190px;;font-size: 60px;font-weight: bold;">
-					10
-				</div>
-			</span>
-		</label> -->
+
 
 
 		<div id="x1" class="dj-content-ex">
@@ -46,6 +39,9 @@
 				<div class="pct-exam-list">
 					<form id="form" method="post">
 						<div class="n">
+							
+							<div class="Stext" style="font-size: 25px;position: absolute; top: -30px;left: -250px;">一 、随机题型，共五题，一共100分</div>
+							
 							<div class="pct-exam-one">
 								<span class="title-tm">
 									1.测试题目1，
@@ -232,7 +228,7 @@
 
 			var tiType = ["反假", "反假", "反假", "反假", "反假"]
 			var anser = [];
-			var score = [10, 10, 10, 10, 10];
+			var score = [20, 20, 20, 20, 20];
 			var userScore = 0;
 			var isResult = false;
 			var randoms = new Set(); // 使用 Set 来存储唯一值
@@ -304,7 +300,7 @@
 						}
 						if (str == anser[i]) {
 							userScore += score[i]
-							document.getElementById("s" + (i + 1)).innerHTML = "回答正确，10分";
+							document.getElementById("s" + (i + 1)).innerHTML = "回答正确，20分";
 						}
 						document.getElementById("d" + (i + 1)).innerHTML = anser[i];
 
