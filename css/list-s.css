@@ -4,6 +4,7 @@
 	line-height: 25px;
 	font-size: 14px;
 	font-style: italic;
+	font-weight: 540;
 }
 
 
@@ -418,7 +419,7 @@ a:visited {
 .tlabel{
 	position: relative;
 	left: 25px;
-	top: -22px;
+	top: -16px;
 }
 
 .n{
