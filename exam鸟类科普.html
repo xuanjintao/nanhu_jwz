@@ -44,7 +44,7 @@
 							</div>
 
 							<div class="pct-exam-one">
-								<img src="bird/1.jpg" style="height: 150px; width: 200px; margin-bottom:10px" /><br />
+								<img src="" id="p1"style="height: 150px; width: 200px; margin-bottom:10px" /><br />
 								<span class="title-tm">
 									1.测试题目1，
 								</span>
@@ -73,7 +73,7 @@
 						<div class="n">
 
 							<div class="pct-exam-one">
-								<img src="bird/2.png" style="height: 150px; width: 200px; margin-bottom:10px" /><br />
+								<img src="" id="p2"style="height: 150px; width: 200px; margin-bottom:10px" /><br />
 								<span class="title-tm">
 									2.测试题目1，
 								</span>
@@ -102,7 +102,7 @@
 						<div class="n">
 
 							<div class="pct-exam-one">
-								<img src="bird/3.jpg" style="height: 150px; width: 200px; margin-bottom:10px" /><br />
+								<img src="" id="p3"style="height: 150px; width: 200px; margin-bottom:10px" /><br />
 								<span class="title-tm">
 									3.测试题目1，
 								</span>
@@ -131,7 +131,7 @@
 						<div class="n">
 
 							<div class="pct-exam-one">
-								<img src="bird/4.png" style="height: 150px; width: 200px; margin-bottom:10px" /><br />
+								<img src="" id="p4"style="height: 150px; width: 200px; margin-bottom:10px" /><br />
 								<span class="title-tm">
 									4.测试题目1，
 								</span>
@@ -160,7 +160,7 @@
 						<div class="n">
 
 							<div class="pct-exam-one">
-								<img src="bird/5.JPG" style="height: 150px; width: 200px; margin-bottom:10px" /><br />
+								<img src="" id="p5"style="height: 150px; width: 200px; margin-bottom:10px" /><br />
 								<span class="title-tm">
 									5.测试题目1，
 								</span>
@@ -205,17 +205,13 @@
 				</div>
 			</div>
 
-
-
-			<!-- <div class="btn btn-submit" id="result" onmouseover="c1(this)" onmousemove="c2(this)" onmouseleave="c3(this)" onmouseup="result()" >提交</div> -->
-
 		</div>
 
 		<br /><br /><br /><br /><br />
 
 
 
-		<script src="js/tiku.js"></script>
+		<script src="js/birdtiku.js"></script>
 		<script>
 			function c1(a) {
 				a.style.backgroundColor = "grey";
@@ -232,34 +228,42 @@
 				a.style.color = "black";
 			}
 
+
+			var imgs = [
+				"bird/0.jpg", "bird/1.jpg", "bird/2.jpg", "bird/3.jpg", "bird/4.jpg", "bird/5.jpg", "bird/6.jpg",
+				"bird/7.jpg", "bird/8.jpg", "bird/9.jpg", "bird/10.jpg", "bird/11.jpg", "bird/12.jpg", "bird/13.jpg",
+				"bird/14.jpg", "bird/15.jpg", "bird/16.jpg"
+			]
 			var tiType = ["鸟类科普", "鸟类科普", "鸟类科普", "鸟类科普", "鸟类科普"]
 			var anser = [];
 			var score = [20, 20, 20, 20, 20];
 			var userScore = 0;
 			var isResult = false;
 			var randoms = new Set(); // 使用 Set 来存储唯一值
-			var nm=0
-			
+			var nm = 0
+
 			function generateUniqueRandomArray(length, max) {
-			    const uniqueNumbers = new Set();  
-			
-			    while (uniqueNumbers.size < length) {  
-			        const randomNum = Math.floor(Math.random() * max);  
-			        uniqueNumbers.add(randomNum);
-			    }  
-			
-			    return Array.from(uniqueNumbers);  
-			}  
-			
+				const uniqueNumbers = new Set();
+
+				while (uniqueNumbers.size < length) {
+					const randomNum = Math.floor(Math.random() * max);
+					uniqueNumbers.add(randomNum);
+				}
+
+				return Array.from(uniqueNumbers);
+			}
+
 			// 使用示例：生成一个长度为5，最大值为10的不重复随机数组  
-			const randomArray = generateUniqueRandomArray(5, 18);  
+			const randomArray = generateUniqueRandomArray(5, 16);
 			console.log(randomArray);
+
 			function rollT(type) {
-				if(type === "鸟类科普"){
+				if (type === "鸟类科普") {
 					return randomArray[nm]
 				}
-				
+
 			}
+
 			function setText(num, index) {
 				var ti = document.getElementsByClassName("n");
 				ti[num].getElementsByTagName("span")[0].innerHTML = (num + 1) + "、" + tiku[index].text
@@ -284,15 +288,9 @@
 					values[3].getElementsByTagName("label")[0].innerHTML = "D、" + tiku[index].D;
 				}
 			}
-
 			function result() {
-				// if (isResult) {
-				// 	return;
-				// }
-				// isResult = true;
 				var r = confirm("您确定要当前提交考试吗？")
 				if (r) {
-					// window.location.href = "../nanhu_jwz/index.html";
 					for (var i = 0; i < tiType.length; i++) {
 						var tx = document.getElementsByName("t" + (i + 1));
 						var str = "";
@@ -306,7 +304,6 @@
 							document.getElementById("s" + (i + 1)).innerHTML = "回答正确，20分";
 						}
 						document.getElementById("d" + (i + 1)).innerHTML = anser[i];
-
 
 					}
 					var allInp = document.getElementsByTagName("input");
@@ -331,6 +328,7 @@
 					document.getElementById("result").style.display = "none";
 					document.getElementById("fnscore").innerHTML = userScore;
 					document.getElementById("scoreText").style.display = ""
+
 					window.scrollTo({
 						top: 0,
 						left: 0,
@@ -346,11 +344,8 @@
 				}
 			}
 
-			// function refresh() {
-			// 	window.location.href = "exam鸟类科普.html"
-			// }
-
 			for (var i = 0; i < 5; i++) {
+				document.getElementById("p" + (i + 1)).src = imgs[randomArray[i]];
 				var tIndex = rollT(tiType[i]);
 				setText(i, tIndex);
 				if (i < 5) {
@@ -359,14 +354,6 @@
 				}
 				anser[i] = tiku[tIndex].yes
 			}
-
-			// document.getElementById('result').addEventListener('click', function() {
-			// 	window.scrollTo({
-			// 		top: 0,
-			// 		left: 0,
-			// 		behavior: 'smooth' // 可选，平滑滚动效果
-			// 	});
-			// });
 		</script>
 
 		<div class="footer">
