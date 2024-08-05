@@ -13,13 +13,6 @@
 			<link rel="stylesheet" href="css/list-s.css">
 		</div>
 		<link rel="stylesheet" href="css/dj-examstyle.css">
-		<div>
-			<script src="js/jquery.min.js"></script>
-			<script src="js/layer.js"></script>
-			<script src="js/jquery.ztree.core.js"></script>
-			<script src="js/jquery.ztree.excheck.js"></script>
-			<script src="js/bootstrap.min.js"></script>
-		</div>
 		<script src="js/vconsole.min.js"></script>
 		<style type="text/css">
 			.breadcrumb {
@@ -178,12 +171,10 @@
 									C
 								</span>
 							</span>
-							<!-- 						<div onmouseup="result()"></div> -->
 
 						</div>
 					</form>
 				</div>
-				<!-- 			<button class="btn btn-output" onclick="back()">退出</button> -->
 
 			</div>
 
@@ -199,10 +190,6 @@
 					</p>
 				</div>
 			</div>
-
-
-
-			<!-- <div class="btn btn-submit" id="result" onmouseover="c1(this)" onmousemove="c2(this)" onmouseleave="c3(this)" onmouseup="result()" >提交</div> -->
 
 		</div>
 
@@ -280,10 +267,6 @@
 			}
 
 			function result() {
-				// if (isResult) {
-				// 	return;
-				// }
-				// isResult = true;
 				var r = confirm("您确定要当前提交考试吗？")
 				if (r) {
 					// window.location.href = "../nanhu_jwz/index.html";
@@ -339,10 +322,6 @@
 					window.location.href = "index.html";
 				}
 			}
-
-			// function refresh() {
-			// 	window.location.href = "exam交通.html"
-			// }
 
 			for (var i = 0; i < 5; i++) {
 				var tIndex = rollT(tiType[i]);

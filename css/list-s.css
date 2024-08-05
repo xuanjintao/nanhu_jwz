@@ -1,10 +1,12 @@
 .title-tm {
     margin: 0 0 10px;
 	margin-bottom: 10px;
-	line-height: 25px;
-	font-size: 14px;
+	line-height: 20px;
+	font-size: 15px;
 	font-style: italic;
-	font-weight: 540;
+	font-weight: 500;
+/* 	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
